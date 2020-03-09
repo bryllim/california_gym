@@ -56,24 +56,6 @@ var chart = new Chart(ctx, {
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         datasets: [{
-            label: 'New Members',
-            backgroundColor: 'red',
-            borderColor: 'black',
-            data: [
-                {{ $graph_members['January'] }},
-                {{ $graph_members['February'] }},
-                {{ $graph_members['March'] }},
-                {{ $graph_members['April'] }},
-                {{ $graph_members['May'] }},
-                {{ $graph_members['June'] }},
-                {{ $graph_members['July'] }},
-                {{ $graph_members['August'] }},
-                {{ $graph_members['September'] }},
-                {{ $graph_members['October'] }},
-                {{ $graph_members['November'] }},
-                {{ $graph_members['December'] }},
-            ]
-        },{
             label: 'Gym Revenue',
             backgroundColor: 'maroon',
             borderColor: 'black',
@@ -90,6 +72,24 @@ var chart = new Chart(ctx, {
                 {{ $graph_revenue['October'] }},
                 {{ $graph_revenue['November'] }},
                 {{ $graph_revenue['December'] }},
+            ]
+        },{
+            label: 'New Members',
+            backgroundColor: 'red',
+            borderColor: 'black',
+            data: [
+                {{ $graph_members['January'] }},
+                {{ $graph_members['February'] }},
+                {{ $graph_members['March'] }},
+                {{ $graph_members['April'] }},
+                {{ $graph_members['May'] }},
+                {{ $graph_members['June'] }},
+                {{ $graph_members['July'] }},
+                {{ $graph_members['August'] }},
+                {{ $graph_members['September'] }},
+                {{ $graph_members['October'] }},
+                {{ $graph_members['November'] }},
+                {{ $graph_members['December'] }},
             ]
         }]
     },
