@@ -40,7 +40,7 @@ class MemberController extends Controller
         $member->type = $request->type;        
 
         $imageName = time().'.'.$request->image->extension();  
-        $request->image->move(public_path('images/members'), $imageName);
+        $request->image->move(url('images/members'), $imageName);
         $member->image = $imageName;
 
         $member->save();
