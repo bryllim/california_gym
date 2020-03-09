@@ -126,4 +126,18 @@ class MemberController extends Controller
         $member = Member::find($id);
         return view('editmember')->with(['member' => $member]);
     }
+
+    public function update(Request $request)
+    {
+        $member = Member::find($request->member_id);
+        $member->firstname = $request->firstname;
+        $member->lastname = $request->lastname;
+        $member->address = $request->address;
+        $member->contact = $request->contact;
+        $member->sex = $request->sex;
+        $member->type = $request->type;
+        $member->save();
+
+        return redirect('members');
+    }
 }

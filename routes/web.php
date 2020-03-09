@@ -24,6 +24,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/members', 'MemberController@index')->name('members');
     Route::post('/member-create', 'MemberController@create')->name('member-create');
+    Route::post('/update', 'MemberController@update')->name('member-update');
     Route::post('/initialPayment', 'MemberController@initialPayment')->name('initialPayment');
     Route::get('/member/{id}', 'MemberController@viewMember')->name('viewMember');
     Route::get('/renew/{id}', 'MemberController@renew')->name('renew');
@@ -33,10 +34,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/newmember', function(){
         return view('newmember');
     })->name('newmember');
-
-    Route::get('/amountdue', function(){
-        return view('receiptmember');
-    })->name('amountdue');
     
 });
 
