@@ -11,7 +11,7 @@ class MemberController extends Controller
 {
     
     // For receipt
-    public $studentfee = 750;
+    public $studentfee = 700;
     public $regularfee = 750;
     public $membershipfee = 250;
     
